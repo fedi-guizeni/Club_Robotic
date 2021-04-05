@@ -399,7 +399,14 @@
       padding: 0.45rem 1.2rem;
     }
   }
-
+#error-msg {
+  background: #D31027; 
+background: -webkit-linear-gradient(to right, #EA384D, #D31027); 
+background: linear-gradient(to right, #EA384D, #D31027);
+  border-radius: 25px;
+  text-align: center;
+  font-size: 14px;
+}
   /* Footer CSS */
 .footer__container {
     background-color: #131313;
@@ -524,3 +531,4 @@
   }
   .highlight {
     border-bottom: 4px solid #131313;
+  }

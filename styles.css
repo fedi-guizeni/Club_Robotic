@@ -633,6 +633,14 @@ height: 60%;
   border:none;
   border-radius: 15px;
   font-size: 1rem;
+  
+}
+a {
+  text-decoration: none;
+  color: #131313;
+}
+a:hover{
+  color: #fff;
 }
 
 .services__card button:hover{

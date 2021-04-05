@@ -84,7 +84,7 @@ const email = document.getElementById ('emaile');
 const password = document.getElementById ('password');
 const passwordConfirm = document.getElementById ('password-confirm');
 
-//dhow error message
+//error message
 function showError (input , message) {
   const formValidation =input.parentElement;
   formValidation.className = 'form-validation error' ; 
@@ -99,11 +99,11 @@ function showValid (input) {
 function getFieldName(input) {
   return input.name.charAt(0).toUpperCase() + input.name.slice(1);
 }
-//check required fields 
+//check required field 
 function checkRequired(Arr) {
    Arr.forEach(function(input)  {
      if (input.value.trim() === '') {
-      showError ( input ,`${getFieldName(input)} is required` )
+      showError ( input ,`${getFieldName(input)} est requis` )
  
      }else {
        showValid(input);
@@ -114,17 +114,17 @@ function checkRequired(Arr) {
 //check input length
 function checklength(input , min , max) {
   if (input.value.length < min) {
-    showError(input , `${getFieldName(input)} must be at least ${min} characters`);
+    showError(input , `${getFieldName(input)} doit avoir au moins  ${min} characters`);
 
   }else if (input.value.length > max){
-    showError(input ,`${getFieldName(input)} must be less than ${max} characters` )
+    showError(input ,`${getFieldName(input)} doit être inférieur à ${max} characters` )
   }else{
     showValid(input);
   }
 }
 function passwordMatch (input1 , input2) {
   if (input1.value!==input2.value)
-  showError (input2 , 'passwords do not match');
+  showError (input2 , 'Les mots de passe ne correspondent pas');
 }
 
 //event listnners 
